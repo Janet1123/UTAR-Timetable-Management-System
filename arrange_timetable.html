@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>UTAR Timetable Management System</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/vendor/jq-schedule/css/style.min.css" />
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/login_page.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: OnePage - v4.7.0
+  * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+  <div class="header">
+    <h1>
+        <span id="logo-left"><img class="logo" src="./assets/img/apple-touch-icon.png"></span>
+        <span id="logo-name">UTAR TIMETABLE MANAGEMENT SYSTEM</span>
+    </h1>
+
+    <!-- navigation -->
+    <div class="NaviBar">
+        <ul>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Feedback</a></li>
+            <li><a href="#">Report Bug</a></li>
+        </ul>
+    </div>
+  </div>
+
+  <div class="middle-header">
+    <button type="button" class="button-self">
+      <span class="iconify" data-icon="eva:arrow-back-fill"></span>
+    </button>
+    <span class="window-title">
+      Arrange Timetable
+    </span>
+  </div>
+
+  <!-- <div class="middle" id="home" data-aos="fade-up" data-aos-delay="100"> -->
+  <div class="middle" id="home">
+    <!-- ======= Timetable ======= -->
+    <div class="timetable container position-relative">
+      <div class="row justify-content-center">
+        <div class="col-md-10 col-sm-12">
+          <span id="subjectLeft">
+            <button type="button" class="button-self" data-bs-toggle="modal" data-bs-target="#subjectModal">
+              <span class="iconify" data-icon="dashicons:menu-alt3"></span>
+              SUBJECT
+            </button>
+          </span>
+          <span id="subjectRight">
+            <input type="checkbox" class="checkbox">
+            <span>
+              Hide Subject Name
+              <div>
+                <ul>
+                  <li><button></button></li>
+                  <li><button></button></li>
+                  <li><button></button></li>
+                </ul>
+              </div>
+            </span>
+
+          </span>
+        </div>
+    
+        <!-- ======= Inner Timetable ======= -->
+        <div class="col-md-10 col-sm-12">
+          <div id="schedule">
+          </div>
+        </div> <!-- End Inner Timetable -->
+    
+        <!-- ======= Overview ======= -->
+        <div class="col-md-8 col-sm-12">
+          <table class="table table-bordered table-hover" id="overview">
+            <thead>
+              <tr>
+                <th scope="col">CODE</th>
+                <th scope="col">SUBJECT</th>
+                <th scope="col">LECTURE</th>
+                <th scope="col">TUTORIAL</th>
+                <th scope="col">PRACTICAL</th>
+                <th scope="col">CREDIT HOUR</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">UALJ2013</th>
+                <td>LEARNING IN JAPANESE</td>
+                <td>L(1)</td>
+                <td>T(1)</td>
+                <td>-</td>
+                <td>3.0</td>
+              </tr>
+              <tr>
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td style="text-align: right; padding-right: 20px" colspan="5">TOTAL CREDIT HOURS</td>
+                <td style="text-align: center;">20.0</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="text-align: center;">*** Maximum total credit hours for full-time UTAR student is 20.0 (long semester) 10.0 (short semester) ***</p>
+        </div> <!-- End Overview -->
+    </div> <!-- End Timetable -->
+
+    <div class="middle-menu">
+      <ul>
+        <li><button><span class="iconify" data-icon="bx:home-alt"></span></button></li>
+        <li><button><span class="iconify" data-icon="carbon:save"></span></button></li>
+        <li><button><span class="iconify" data-icon="ep:setting"></span></button></li>
+      </ul>
+    </div>
+  </div>
+  
+
+  <!-- Choose Subject Modal -->
+  <div class="modal" id="subjectModal" aria-labelledby="subjectModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div id="searchSubjectBar">xxxxx</div>
+          <div id="selectSubjectType">xxxxx</div>
+          <div id="selectSubject">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Choose Subject Modal -->
+
+  <!-- <section id="home" class="d-flex">
+  </section> -->
+
+  <div id="preloader"></div>
+
+  <!-- Web JS Files -->
+  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  <!-- <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script> -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Toggle switch plugin: https://www.jqueryscript.net/form/jQuery-Plugin-For-Sliding-Toggle-Switches-LC-Switch.html -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="assets/vendor/sliding-toggle-switch/lc_switch.min.js"></script>
+
+  <!-- JQ.Schedule: https://www.jqueryscript.net/time-clock/Simple-Daily-Schedule-Plugin-with-jQuery-and-jQuery-UI-Schedule.html -->
+  <script src="assets/vendor/jq-schedule/js/jq.schedule.min.js"></script>
+  <script src='assets/vendor/jq-schedule/js/jquery-ui.min.js'></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
